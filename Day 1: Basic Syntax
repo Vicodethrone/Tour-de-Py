@@ -1,0 +1,314 @@
+#lệnh print()
+print("Hello world!")
+
+######IDENTATION: khi sử dụng những vòng lặp, if else python sẽ thụt lề bằng 1 tab hoặc 4 spaces thay vì dùng ngoặc nhọn như ở C hay C++
+Python:
+while a < 10:
+	print("Gia tri cua a la: ", a)
+
+C++: 
+ while(a < 10) 
+   { 
+      cout << "Gia tri cua a la: " << a << endl; 
+      a++; 
+   } 
+	 
+######VARIABLES AND TYPES: biến và kiểu dữ liệu
+""" Ở python khi khai báo không cần phải khai báo kiểu dữ liệu """
+myint = 7
+print(myint)
+#data types:
+"""
+int: đây là kiểu dữ liệu được dùng để lưu trữ các số nguyên (1, 2, 3, 4, ...).
+float: đây là kiểu dữ liệu dùng để lưu trữ các biến kiểu số thực (1.43, 5.34, 3.333, ...).
+bool: đây là kiểu dữ liệu dùng để lưu trữ các giá trị luận lý (True hoặc False)
+str: đây là kiểu dữ liệu dùng để lưu trữ các xâu ký tự ("Viet Nam", "Codelearn", ...)
+Ngoài ra trong Python còn một số kiểu dữ liệu khác như list, set, dict, tuple, complex.
+"""
+#type(): hàm này sẽ xác định kiểu dữ liệu
+name = "Cristiano Ronaldo"
+pi = 3.14
+print(type(myint)) --> <class 'int'>
+print(type(name)) --> <class 'str'>
+print(type(pi)) --> <class 'float'>
+
+#Các hàm xử lý chuỗi (str): các bạn hãy tham khảo link sau để detail nhất có thể https://toidicode.com/cac-ham-xu-ly-chuoi-trong-python-368.html
+"""Ngoài các hàm xử lý chuổi chúng ta còn có cộng chuỗi, nhân chuỗi, cắt chuỗi (https://codelearn.io/learning/python-co-ban/40556)"""
+
+
+######BASIC OPERATORS: Có tổng cộng 7 toán tử trơng python
+#Python Arithmetic Operator (toán tử số học)
+a = 4
+b = 2
+""" Toán tử cộng 2 giá trị."""
+print(a + b) --> 6
+""" Toán tử trừ 2 giá trị."""
+print(a - b) --> 2
+""" Toán tử nhân 2 giá trị."""
+print(a * b) --> 8
+""" Toán tử chia 2 giá trị."""
+print(a / b) --> 2
+""" Toán tử chia lấy phần nguyên của 2 giá trị."""
+print(a // b) --> 2
+""" Toán tử lấy phần dư 2 giá trị. """
+print(a % b) --> 0
+""" Toán tử mũ """
+print(a ** b)	--> 16
+#Python Relational Operator (toán tử quan hệ)
+""" 
+> : Toán thử lớn hơn - nếu số hạng bên trái lớn hơn số hạng bên phải thì kết quả sẽ là True
+< : Toán tử nhỏ hơn - nếu số hạng bên trái nhỏ hơn số hạng bên phải thì kết quả sẽ là True
+== : Toán tử bằng với - nếu hai số hạng có giá trị bằng nhau thì kết quả sẽ là True.
+!= : Toán tử khác bằng - nếu hai số hạng có giá trị khác nhau thì kết quả sẽ là True.
+>= : Toán tử lớn hơn hoặc bằng - nếu số hạng bên trái lớn hơn hoặc bằng số hạng bên phải thì kết quả sẽ là True
+<= : Toán tử nhỏ hơn hoặc bằng - nếu số hạng bên trái nhỏ hơn hoặc bằng số hạng bên phải thì kết quả sẽ là True
+"""
+x = 5
+y = 10
+print('x > y is', x > y)
+print('x < y is', x < y)
+print('x == y is', x == y)
+print('x != y is', x != y)
+print('x >= y is', x >= y)
+print('x <= y is', x <= y)
+--> output:
+x > y is False
+x < y is True
+x == y is False
+x != y is True
+x >= y is False
+x <= y is True
+#Python Assignment Operator (toán tử gán)
+"""
+= : Gán giá trị vế phải cho vế trái
++= : Tăng vế trái một phần bằng vế phải sau đó gán giá trị cho vế trái (a+=b --> a = a + b)
+Tương tự với -=, *=, /=, %=, //=, **=
+"""
+#Python Membership Operator (toán tử membership)
+"""
+in: Trả về kết quả là true nếu tìm thấy đối số trong một tập đối số và false nếu ngược lại
+not in: Trả về kết quả là true nếu không tìm thấy đối số trong một tập đối số và false nếu ngược lại
+"""
+#Python Identity Operator (toán tử xác thực)
+"""
+is: Nếu các biến ở hai bên của toán tử trỏ đến cùng một đối tượng thì kết quả nhận được là true, nếu ngược lại, kết quả sẽ là false
+is not: Nếu các biến ở hai bên của toán tử trỏ đến cùng một đối tượng thì kết quả nhận được là false, nếu ngược lại, kết quả sẽ là true
+"""
+#Python Logical Operator (toán tử logic)
+"""
+and: Nếu cả hai vế toán hạng đúng thì ta sẽ có điều kiện đúng 
+or: Nếu một trong hai toán hạng đúng thì kết quả trả về là đúng
+not: Sử dụng để đảo ngược tình trạng logic của toán hạng. Nếu biểu thức là True thì kết quả nhận được là False và ngược lại
+"""
+#Python Bitwise Operator (toán tử thao tác bit)
+
+"""Để tìm hiểu rõ hơn về các toán từ các bạn hãy tham khảo link sau nhé https://www.t3h.edu.vn/tin-tuc/toan-tu-trong-python-cac-loai-toan-tu-trong-python"""
+
+######INPUT: nhập từ bàn phím
+# nhập string:
+username = input("Enter username:")
+print("Username is: " + username)
+# nhập số (int và float cũng tương tự)
+number_int = int(input())
+print("Number is: " + str(number_int) """ tại vì chỉ có thể cộng chuỗi với chuỗi nên chúng ta phải chuyển int sang string qua phương thức str()"""
+# nhập list: (list mình sẽ đề cập ở phần sắp tới)
+lst = []
+for i in range(n):
+    lst.append(int(input())
+
+######CONDITIONS: câu lệnh điều kiện sẽ kết hợp với operator(toán tử) để so sánh hoặc xác nhận các đối tượng
+"""
+if condition:
+    # Nếu condition đúng thì khối lệnh này sẽ được thực thi
+else:
+    # Nếu condition sai thì khối lệnh này sẽ được thực thi
+"""
+#and và or:
+name = "John"
+age = 23
+if name == "John" and age == 23:
+    print("Your name is John, and you are also 23 years old.") --> lệnh được thực thi vì cả hai đểu thoả mãn
+
+if name == "John" or name == "Rick":
+    print("Your name is either John or Rick.") --> lệnh được thực thi vì một trong hai thoả mãn
+# các toán tử khác như is và in cũng đều tương tự
+
+#Toán tử 3 ngôi: như một dạng rút gọn đơn giản hơn của conditions (để detail hơn bạn hãy vào trang này https://cafedev.vn/tu-hoc-python-toan-tu-ba-ngoi-trong-python/)
+[on_true] if [expression] else [on_false]
+
+#Nếu trong mệnh đề else muốn thêm if thì có thể thay bằng elif:
+Thay vì:
+			a = int(input())
+			b = int(input())
+			if a == b:
+					print("a = b")
+			else:
+					if a > b:
+							print("a > b")
+					else:
+							print("a < b")
+Thì:
+			a = int(input())
+			b = int(input())
+			if a == b:
+					print("a = b")
+			elif a > b:
+					print("a > b")
+			else:
+					print("a < b")
+		
+######LOOPS:
+#While:
+"""
+		while condition:
+    # Khối lệnh này sẽ được thực thi nếu condition còn đúng
+"""
+i = 1
+while i <= 5:
+    print(i)
+    i += 1
+--> Output sẽ là: 
+1
+2
+3
+4
+5
+#FOR:
+for i in range(1, 5): 
+    print(i)
+--> Output sẽ là:
+1
+2
+3
+4
+""" do range là từ 1 đến 4 (trước số 5)"""
+name = "LearningPython"
+for c in name:
+    print(c)
+--> Output sẽ là:
+L
+e
+a
+r
+n
+i
+n
+g
+P
+y
+t
+h
+o
+n
+#lệnh break và continue:
+#lệnh break: Câu lệnh break được dùng để thoát khỏi vòng lặp, khi đó chương trình vòng lặp sẽ không thực thi tiếp
+for i in range(1, 11):
+    if i == 6:
+        break
+    print(i)
+--> Output:
+1
+2
+3
+4
+5
+#lệnh continue: Khi gặp câu lệnh continue trong vòng lặp, đoạn câu lệnh sẽ không được thực hiện nhưng đoạn khác vẫn tiếp tục thực thi
+for i in range(1, 20):
+    if i % 2 == 0:
+        continue
+    print(i)
+--> Output:
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19	
+
+######LIST: Khá là tương tự với mảng ở các ngôn ngữ khác, ngoài ra có thể tương tác với list như với chuỗi
+mylist = []
+mylist.append(1) #append là thêm phần tử
+mylist.append(2)
+mylist.append(3)
+print(mylist[0]) # prints 1
+print(mylist[1]) # prints 2
+print(mylist[2]) # prints 3
+for x in mylist:
+    print(x) # prints out 1,2,3
+print(len(mylist)) #3 vì hàm len() trả lại số phần tử trong list
+print(max(mylist))	#3 vì hàm max() sẽ trả phần tử lớn nhất trong list
+print(min(mylist)) #1 vì hàm min() sẽ trả phần tử nhỏ nhất trong list
+mylist.insert(0, 4) # chèn số 4 ở vị trí đầu tiên
+print(mylist)	# [4, 1, 2, 3]
+mylist.sort() # sắp xếp các phần tử trong list theo thứ tự tăng dần
+print(mylist) # [1, 2, 3, 4]
+mylist.reverse() # hàm để đảo ngược list
+print(mylist) # [4, 3, 2, 1]
+print(mylist.count(2)) #1 vì hàm count() đếm số lần xuất hiện của một phần tử nào đó trong list
+mylist.remove(1) #hàm dùng để xoá một phần tử ra khỏi list
+print(mylist) # [2, 3, 4]
+mylist.pop(1) # hàm xoá phần tử với vị trí cho trước trong list (ở đây là vị trí thứ 2)
+print(mylist) # [2,4]
+mylist.clear() # hàm xoá hết các phần tử trong list
+print(mylist) #[]
+
+######FUNCTIONS: Giống như ở các ngôn ngữ các function(hàm) có nhiệm vụ thực hiện một chức năng, câu lệnh nào đó để có thể gọi lại nhiều lần, tránh lặp code
+"""
+def <tên_hàm>:
+    # Các đoạn code trong thân hàm
+"""
+def my_function():
+    print("Hello From My Function!")
+my_function() #Hello From My Function!
+#Ngoài ra hàm cũng chứa các biến
+def sum(a, b): #a, b là các biến hàm sẽ thực thi câu lệnh
+	return a + b #return là hàm sẻ trả về một giá trị 
+print(sum(1,2)) #3
+print(sum(3,4)) #7
+
+######DICTIONARIES: Khá là tương tự với object ở javascript hay C++, dictionaries có chức năng lưu trữ các item theo cặp key : value
+#Khai báo và Khởi tạo Dictionary
+listfruits = {
+    "orange":"Qua cam",
+    "apple":"Qua tao",
+    "durian":"Sau rieng",
+    "piniapple":"Qua dua"
+}
+
+#Truy cập đến một phần tử trong Dictionary
+print(listfruits["durian"])
+
+#In ra toàn bộ Dictionary
+print(listfruits)
+
+#Output sẽ là: {"orange": "Qua cam", "apple": "Qua tao", "durian": "Sau rieng", "pineapple": "Qua dua"}
+
+#Cập nhật một item trong Dictionary
+listfruits["apple"] = "Steve Jobs"
+
+#Xóa một item trong Dictionary
+del listfruit["pineapple"]
+
+#In ra Dictionary sau khi đã cập nhật
+print(listfruits)
+
+#Output sẽ là: {"orange": "Qua cam", "apple": "Qua tao", "durian": "Sau rieng"}
+
+#Nguồn: https://niithanoi.edu.vn/huong-dan-tao-va-su-dung-dictionary-trong-python.html
+
+######NGOÀI RA TRONG PYTHON CÒN CÓ CLASS/OBJECTS, INHERITENCE, JSON, FILE HANDLING, PYTHON MYSQL,... là những phần khá nâng cao các bạn newbie chưa cần phải tìm hiểu vội
+trừ khi đã thông thạo và hiểu được hết các phần cơ bản trên. Bài tutorial này của mình khá ngắn gọn nhưng vẫn còn nhiều thiếu sót, các bạn hãy để lại comment để góp ý cho
+chúng mình nhé !!!
+Sau đây là các nguồn tham khảo để các bạn thành thạo syntax cơ bản hơn:
+https://www.learnpython.org
+https://www.w3schools.com/python/
+https://www.codecademy.com/
+https://toidicode.com/python-co-ban
+https://quantrimang.com/python
+
+### CẢM ƠN CÁC BẠN ĐÃ THEO DÕI TUTORIAL DAY 1 CỦA CHÚNG MÌNH Ạ, HÃY ĐÓN CHỜ NHỮNG PHẦN SAU NHÉ
+
