@@ -138,24 +138,24 @@ if name == "John" or name == "Rick":
 
 #Nếu trong mệnh đề else muốn thêm if thì có thể thay bằng elif:
 Thay vì:
-			a = int(input())
-			b = int(input())
-			if a == b:
-					print("a = b")
-			else:
-					if a > b:
-							print("a > b")
-					else:
-							print("a < b")
+a = int(input())
+b = int(input())
+if a == b:
+	print("a = b")
+else:
+	if a > b:
+		print("a > b")
+	else:
+		print("a < b")
 Thì:
-			a = int(input())
-			b = int(input())
-			if a == b:
-					print("a = b")
-			elif a > b:
-					print("a > b")
-			else:
-					print("a < b")
+a = int(input())
+b = int(input())
+if a == b:
+	print("a = b")
+elif a > b:
+	print("a > b")
+else:
+	print("a < b")
 		
 ######LOOPS:
 #While:
